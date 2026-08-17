@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B4: Tabs (Level 02)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0E779F;
+            --default: #4A0D66;
+            --light-text: #969499;
+            --dark-text: #37314c;
+            --middle: #d4d9e8;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            padding: 125px 0;
+            margin: 0;
+            font-family: "Arial";
+        }
+        main {
+            width: 1000px;
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 5px solid var(--bg);
+        }
+        #tabs {
+            display: flex;
+        }
+
+        #tabs button {
+            flex: 1;
+            padding: 1.25rem;
+            border: none;
+            border-right: 1.5px solid white;
+            background: var(--middle);
+            font-weight: bold;
+            font-size: .85rem;
+            color: #43435d;
+            transition: .3s;
+            cursor: pointer;
+        }
+
+        #tabs button:not(.active):hover {
+            background: #c2cadd;
+        }
+
+        #tabs button:last-child {
+            border: none;
+        }
+
+        #tabs button.active {
+            color: var(--default);
+            background: white;
+        }
+
+        .content {
+            height: 350px;
+            padding: 2rem;
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #474b64;
+        }
+
+        p {
+            color: #9f9d9f;
+            max-width: 87ch;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .learn-more {
+            background: #36314b;
+            color: white;
+            border: none;
+            padding: .7rem 1.5rem;
+            font-weight: bold;
+            border-radius: 3px;
+            transition: .3s;
+            cursor: pointer;
+        }
+
+        .learn-more:hover {
+            transform: translateY(-3px);
+            background: #490d65;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div id="tabs">
+        <button data-control="content-1" class="btn active">ABOUT</button>
+        <button data-control="content-2" class="btn">HISTORY</button>
+        <button data-control="content-3" class="btn">OBJECTIVES</button>
+        <button data-control="content-4" class="btn">IMPACT</button>
+    </div>
+    <div id="contents">
+        <div class="content content-1 active">
+            <h1>Introduction to WorldSkills</h1>
+            <p>WorldSkills is a global platform for young professionals to demonstrate their skills in various trades and technologies. It aims to raise the profile and confidence of skilled people and show how important skills are in achieving economic growth.</p>
+            <button class="learn-more">LEARN MORE</button>
+        </div>
+        <div class="content content-2">
+            <h1>History of WorldSkills</h1>
+            <p>WorldSkills was founded in 1950 and has since grown to include participants from over 80 countries. The competition showcases a wide range of skills, from traditional trades to multi-skilled technology jobs.</p>
+            <button class="learn-more">LEARN MORE</button>
+        </div>
+        <div class="content content-3">
+            <h1>Objectives of the Competition</h1>
+            <p>The competition aims to inspire young people to develop a passion for skills and pursue excellence through competition, events, and initiatives. It promotes international cooperation and exchange of knowledge.</p>
+            <button class="learn-more">LEARN MORE</button>
+        </div>
+        <div class="content content-4">
+            <h1>Impact and Legacy</h1>
+            <p>WorldSkills leaves a lasting impact on participants by enhancing their skills, boosting their career prospects, and fostering a global network of skilled professionals. It also influences education and training standards worldwide.</p>
+            <button class="learn-more">LEARN MORE</button>
+        </div>
+    </div>
+</main>
+
+<script>
+    const $tabs = document.querySelectorAll('.btn');
+    const $contents = document.querySelectorAll('.content');
+
+    $tabs.forEach($tab => {
+        $tab.addEventListener('click', function() {
+            [...$tabs, ...$contents].forEach(t => t.classList.remove('active'));
+            $tab.classList.add('active');
+            document.querySelector(`.content.${$tab.dataset.control}`).classList.add('active');
+        });
+    })
+</script>
+</body>
+</html>

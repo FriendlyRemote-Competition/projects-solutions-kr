@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A4: Bars animations (Level 01)</title>
+    <style>
+        body {
+            background: #000000;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .graph {
+            display: flex;
+            width: 300px;
+            height: 150px;
+            gap: 20px;
+            align-items: end;
+        }
+
+        .item {
+            flex: 1;
+            height: 100%;
+            background: #00fd01;
+        }
+
+        .item:nth-child(1) {animation: 1.25s bar-1 infinite}
+        .item:nth-child(2) {animation: 1.25s bar-2 infinite}
+        .item:nth-child(3) {animation: 1.25s bar-3 infinite}
+        .item:nth-child(4) {animation: 1.25s bar-4 infinite}
+        .item:nth-child(5) {animation: 1.25s bar-5 infinite}
+
+        @keyframes bar-1 {
+            0% {height: 50%;}
+            10% {height: 30%;}
+            20% {height: 80%;}
+            30% {height: 40%;}
+            40% {height: 85%;}
+            50% {height: 35%;}
+            60% {height: 80%;}
+            70% {height: 40%;}
+            80% {height: 85%;}
+            100% {height: 100%;}
+        }
+        @keyframes bar-2 {
+            0% {height: 30%;}
+            10% {height: 60%;}
+            20% {height: 20%;}
+            30% {height: 90%;}
+            40% {height: 35%;}
+            50% {height: 65%;}
+            60% {height: 40%;}
+            70% {height: 80%;}
+            80% {height: 35%;}
+            100% {height: 30%;}
+        }
+        @keyframes bar-3 {
+            0% {height: 50%;}
+            10% {height: 80%;}
+            20% {height: 30%;}
+            30% {height: 50%;}
+            40% {height: 95%;}
+            50% {height: 35%;}
+            60% {height: 70%;}
+            70% {height: 40%;}
+            80% {height: 75%;}
+            100% {height: 50%;}
+        }
+        @keyframes bar-4 {
+            0% {height: 70%;}
+            10% {height: 20%;}
+            20% {height: 40%;}
+            30% {height: 60%;}
+            40% {height: 35%;}
+            50% {height: 95%;}
+            60% {height: 30%;}
+            70% {height: 60%;}
+            80% {height: 35%;}
+            100% {height: 70%;}
+        }
+        @keyframes bar-5 {
+            0% {height: 40%;}
+            10% {height: 80%;}
+            20% {height: 30%;}
+            30% {height: 60%;}
+            40% {height: 35%;}
+            50% {height: 45%;}
+            60% {height: 80%;}
+            70% {height: 60%;}
+            80% {height: 35%;}
+            100% {height: 40%;}
+        }
+    </style>
+</head>
+<body>
+<div class="graph">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+</div>
+</body>
+</html>

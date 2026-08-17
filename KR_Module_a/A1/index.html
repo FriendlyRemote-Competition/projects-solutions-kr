@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A1: Olympic rings (Level 02)</title>
+    <style>
+        :root {
+            --blue: #0084c5;
+            --black: #000000;
+            --red: #dd0024;
+            --yellow: #f2c100;
+            --green: #009e3d;
+        }
+        .ring {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 7px solid transparent;
+        }
+
+        .ring.blue {
+            left: 0;
+            top: 0;
+            border-color: var(--blue);
+        }
+        .ring.black {
+            left: 130px;
+            top: 0;
+            border-color: var(--black);
+        }
+        .ring.red {
+            left: 260px;
+            top: 0;
+            border-color: var(--red);
+        }
+        .ring.yellow {
+            left: 65px;
+            top: 65px;
+            border-color: var(--yellow);
+        }
+        .ring.green {
+            left: 195px;
+            top: 65px;
+            border-color: var(--green);
+        }
+
+        .ring::before {
+            content: "";
+            position: absolute;
+            inset: -7px;
+            width: 100px;
+            height: 100px;
+            border-radius: inherit;
+            border: 7px solid transparent;
+        }
+
+        .ring.blue::before {
+            border-right-color: var(--blue);
+            z-index: 1;
+        }
+        .ring.black::before {
+            border-right-color: var(--black);
+            border-bottom-color: var(--black);
+            z-index: 1;
+        }
+        .ring.green::before {
+            border-left-color: var(--green);
+            z-index: 1;
+        }
+        .ring.red::before {
+            border-bottom-color: var(--red);
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body>
+<div class="ring blue"></div>
+<div class="ring black"></div>
+<div class="ring red"></div>
+<div class="ring yellow"></div>
+<div class="ring green"></div>
+</body>
+</html>
