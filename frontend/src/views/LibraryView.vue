@@ -25,7 +25,7 @@ const getCurrentPosition = item => {
   </div>
   <div class="row g-3 row-cols-1 row-cols-md-2 row-cols-lg-3" v-if="data">
     <div class="col" v-for="item in chapters" :key="item.id">
-      <div class="list-item vstack gap-2">
+      <div class="list-item vstack gap-2" :class="{active: getProgress(item) == '100.00'}">
         <h3 class="fs-5">Chapter {{item.number}}. {{item.title}}</h3>
 
         <div class="hstack gap-2">
@@ -43,5 +43,8 @@ const getCurrentPosition = item => {
 </template>
 
 <style scoped>
-
+.list-item.active {
+  border: 3px solid var(--bs-primary);
+  box-shadow: 6px 6px 0 var(--bs-primary);
+}
 </style>

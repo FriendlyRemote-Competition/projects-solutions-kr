@@ -30,11 +30,11 @@ function remove(idx) {
       <div class="col" v-for="(item,idx) in bookmarks">
         <div class="list-item hstack justify-content-between">
           <div class="vstack gap-2">
-            <span class="badge me-auto text-bg-secondary" v-if="item.contentIdx">Content Bookmarked</span>
+            <span class="badge me-auto text-bg-secondary" v-if="item.contentIdx !== null">Content Bookmarked</span>
             <span class="badge me-auto text-bg-primary" v-else>Section Bookmarked</span>
             <h3>Chapter {{ getNumber(item.sectionId.split('-')[0]) }} → Section
               {{ getNumber(item.sectionId.split('-')[1]) }}</h3>
-            <span v-if="item.contentIdx">
+            <span v-if="item.contentIdx !== null">
               ...{{ getContent(item) }}....
             </span>
           </div>

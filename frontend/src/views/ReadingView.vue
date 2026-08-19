@@ -1,6 +1,6 @@
 <script setup>
 
-import {computed, onMounted} from "vue";
+import {computed, onMounted, onUnmounted} from "vue";
 import {bookmarks, chapters, currentReadingStyle, data, highlight, progress} from "@/stores/app.js";
 import {explodeContent, getImage, setMarked} from "@/utils.js";
 import router from "@/router/index.js";
@@ -25,6 +25,8 @@ onMounted(() => {
 const currentSectionIndex = computed(() => chapter.value?.sections.findIndex(s => s.id === section.value.id));
 
 const successSections = computed(() => chapter.value?.sections.filter(s => progress.value.includes(s.id)).length ?? 0)
+
+const findSectionIndex = computed(() => chapter.value?.sections.findIndex(s => s.id == sectionId));
 
 /* section prev and next pagination functions */
 function goPrev() {
@@ -54,6 +56,8 @@ function resetProgressThisChapter() {
 function setBookmark(idx = null) {
  bookmarks.value.push({sectionId, contentIdx: idx});
 }
+
+onUnmounted(() => highlight.value = null);
 </script>
 
 <template>
@@ -62,12 +66,12 @@ function setBookmark(idx = null) {
     <div class="hstack justify-content-between flex-wrap gap-3">
       <div class="hstack gap-2 align-items-end">
         <h2 class="mb-0">Chapter Reading</h2>
-        <span class="text-muted">Chapter {{ chapter.number }} → Section {{ successSections }} of {{ chapter.sections.length }}</span>
+        <span class="text-muted">Chapter {{ chapter.number }} → Section {{ findSectionIndex + 1 }} of {{ chapter.sections.length }}</span>
       </div>
 
       <div class="hstack gap-2">
         <button class="btn btn-danger" @click="resetProgressThisChapter()">Reset Progress This Chapter</button>
-        <button class="btn btn-primary" :class="{'item-disabled': bookmarks.some(b => b.sectionId == sectionId)}" @click="setBookmark">⭐ Bookmark</button>
+        <button class="btn btn-primary" :class="{'item-disabled': bookmarks.some(b => b.sectionId == sectionId)}" @click="setBookmark(null)">⭐ Bookmark</button>
         <button class="btn btn-warning">Aa</button>
       </div>
     </div>
