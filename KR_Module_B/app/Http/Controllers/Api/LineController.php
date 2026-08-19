@@ -13,7 +13,7 @@ class LineController extends Controller
 {
     public function index()
     {
-        $lines = Line::latest('code')->get();
+        $lines = Line::oldest('code')->get();
 
         return LineResource::collection($lines);
     }
