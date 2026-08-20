@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="module-d">
+    <title>The Sù Hotel Shanghai</title>
+    <link rel="icon" href="./media_files/brand/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./assets/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/main.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="container h-100 hstack justify-content-between">
+        <img src="./media_files/brand/su-hotel-logo-light.svg" class="logo" alt="">
+
+        <nav class="hstack gap-4">
+            <a href="#hotel-story" class="nav-link" data-section="hotel-story">Hotel</a>
+            <a href="#rooms" class="nav-link" data-section="rooms">Rooms</a>
+            <a href="#dining" class="nav-link" data-section="dining">Dining</a>
+            <a href="#wellness" class="nav-link" data-section="wellness">Wellness</a>
+            <a href="#shanghai" class="nav-link" data-section="shanghai">Shanghai</a>
+        </nav>
+
+        <div class="hstack gap-4 side">
+            <span>EN</span>
+            <button class="btn outline">Book your stay</button>
+        </div>
+
+        <button aria-expanded="false" class="btn mobile-btn"><img src="./media_files/icons/icon-menu.svg"
+                                                                  style="width: 50px" alt="mobile-menu"></button>
+    </div>
+</header>
+<!-- HEADER -->
+
+<!-- ASIDE MOBILE -->
+<aside id="mobile-slide" class="shadow gap-4">
+    <div class="hstack justify-content-end">
+        <button class="btn close-btn ms-auto"><img src="./media_files/icons/icon-close.svg" style="width: 30px"
+                                                   alt="close-menu"></button>
+    </div>
+    <div class="vstack gap-4">
+        <nav class="d-flex flex-column gap-4">
+            <a href="#hotel-story" class="nav-link" data-section="hotel-story">Hotel</a>
+            <a href="#rooms" class="nav-link" data-section="rooms">Rooms</a>
+            <a href="#dining" class="nav-link" data-section="dining">Dining</a>
+            <a href="#wellness" class="nav-link" data-section="wellness">Wellness</a>
+            <a href="#shanghai" class="nav-link" data-section="shanghai">Shanghai</a>
+        </nav>
+        <button class="btn bg-dark text-white">Book your stay</button>
+    </div>
+</aside>
+<!-- ASIDE MOBILE -->
+
+<!-- HERO -->
+<section id="hero">
+    <picture class="hero-image">
+        <source media="(max-width: 640px)" srcset="./media_files/images/hero-shanghai-hotel-mobile.webp">
+        <source srcset="./media_files/images/hero-shanghai-hotel.webp">
+        <img src="./media_files/images/hero-shanghai-hotel.jpg"
+             alt="The Sù Hotel terrace overlooking Suzhou Creek and the Shanghai skyline at blue hour."
+             fetchpriority="high" decoding="async" class="hero-image">
+    </picture>
+    <div class="container">
+        <div class="hero-text d-flex flex-column gap-4">
+            <span class="eyebrow fade-in text-uppercase">A quiet address in a city of movement</span>
+            <h1 class="fade-in">Stay close to the soul of Shanghai</h1>
+            <p class="fade-in fs-5">River light, Art Deco restraint and intuitive hospitaility meet beside Suzhou
+                Creek.</p>
+        </div>
+        <div class="hstack gap-3 flex-wrap">
+            <button class="btn btn-primary move fade-in">Book your stay</button>
+            <button class="btn fade-in outline border-0">Discover the hotel →</button>
+        </div>
+    </div>
+    <div class="scroll">SCROLL
+        <div class="line"></div>
+    </div>
+</section>
+<!-- HERO -->
+
+<!-- HOTEL STORY -->
+<section id="hotel-story">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-5">
+                <img src="./media_files/images/story-lobby.webp"
+                     alt="A contemporary Art Deco hotel lobby with warm brass lighting and a curved staircase.">
+            </div>
+            <div class="col-12 col-lg-7">
+                <span class="eyebrow text-uppercase">Between water and city</span>
+                <h2 class="heading">A Shanghai stay with room to breathe</h2>
+                <p class="body"><strong>Set beside Suzhou Creek,</strong> The Sù brings together the composure of a
+                    private residence and the instinctive care of a great city hotel. Art Deco lines, warm materials and
+                    river light shape every space.</p>
+                <hr style="margin-top: 75px">
+
+                <div class="row g-0 row-cols-1 row-cols-lg-3">
+                    <div class="col">
+                        <div class="label vstack gap-2">
+                            <h3 class="display-5">48</h3>
+                            <span>ROOMS</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="label vstack gap-2">
+                            <h3 class="display-5">2</h3>
+                            <span>RESTAURANTS</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="label vstack gap-2">
+                            <h3 class="display-5">24-hour</h3>
+                            <span>HOSTS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- HOTEL STORY -->
+
+<!-- ROOMS -->
+<section id="rooms">
+    <div class="container vstack gap-4">
+        <div class="hstack justify-content-between flex-wrap gap-3">
+            <div class="vstack gap-2">
+                <span>ROOMS & SUITES</span>
+                <h2>A private view of Shanghai</h2>
+            </div>
+
+            <span>Four considered spaces, each composed for rest, <br> conversation and the changing river light.</span>
+        </div>
+
+        <div class="row room-item g-0">
+            <div class="col-12 col-lg-7">
+                <img class="room-image" src="./media_files/images/room-deluxe-river.webp"
+                     alt="A calm river-facing room shaped by warm timber, cream linen and morning light.">
+            </div>
+            <div class="col-12 col-lg-5">
+                <div class="item">
+                    <span class="index text-muted small">01 / 04</span>
+                    <h3 class="name">Deluxe River Room</h3>
+                    <p class="description">A calm river-facing room shaped by warm timber, cream linen and morning
+                        light.</p>
+                    <hr>
+                    <div class="row g-0 small row-cols-1 row-cols-lg-3">
+                        <div class="col">
+                            <div class="vstack gap-1">
+                                <span class="text-muted">SPACE</span>
+                                <strong class="size">42 m²</strong>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="vstack gap-1">
+                                <span class="text-muted">GUESTS</span>
+                                <strong class="guest">2</strong>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="vstack gap-1">
+                                <span class="text-muted">BED</span>
+                                <strong class="bed">1 king bed</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h4>From CNY <span class="price">2380</span> / night</h4>
+                    <div class="hstack gap-2">
+                        <button class="btn border-bottom border-2">VIEW ROOM DETAILS</button>
+                        <button class="btn bg-dark text-white">BOOK THIS ROOM</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hstack gap-2">
+            <button class="btn p-3 me-3 rounded-pill border-dark arrow-left">
+                <img src="./media_files/icons/icon-arrow.svg" style="width: 20px;transform: scaleX(-1)" alt="">
+            </button>
+            <div class="hstack gap-2 line-area w-100">
+
+            </div>
+            <button class="btn p-3 ms-3 rounded-pill border-dark arrow-right">
+                <img src="./media_files/icons/icon-arrow.svg" style="width: 20px;" alt="">
+            </button>
+        </div>
+    </div>
+</section>
+<!-- ROOMS -->
+
+<!-- DINING -->
+<section id="dining">
+    <div class="container vstack gap-4">
+        <div class="hstack justify-content-between flex-wrap gap-3">
+            <div class="vstack gap-2">
+                <span>DINING</span>
+                <h2>Shanghai, served with clarity</h2>
+            </div>
+
+            <span class="text-secondary">Season-led cooking downstairs. River-facing cocktails upstairs.</span>
+        </div>
+
+        <div class="row g-3 row-cols-1 row-cols-lg-2">
+            <div class="col">
+                <div class="item">
+                    <img src="./media_files/images/dining-su-kitchen.webp"
+                         alt="Dining room at SU Kitchen with warm pendant lights and contemporary Chinese interiors.">
+                    <div class="item-text">
+                        <span class="eyebrow">Modern Shanghai table</span>
+                        <h3>SU Kitchen</h3>
+                        <span class="description">Seasonal produce, familiar flavours and a clear contemporary point of view.</span>
+                        <span class="hours">Breakfast 06:30–10:30 · Dinner 17:30–22:00</span>
+                    </div>
+                    <span class="sample-menu">VIEW SAMPLE MENU</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="item">
+                    <img src="./media_files/images/dining-river-bar.webp"
+                         alt="Curved stone cocktail bar lit with amber light beside blue river reflections.">
+                    <div class="item-text">
+                        <span class="eyebrow">Drinks after dusk</span>
+                        <h3>River Bar</h3>
+                        <span class="description">Quiet cocktails, river reflections and a soundtrack that settles into the evening.</span>
+                        <span class="hours">Daily 16:00–01:00</span>
+                    </div>
+                    <span class="sample-menu">VIEW SAMPLE MENU</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- DINING -->
+
+<!-- WELLNESS -->
+<section id="wellness">
+    <div class="container vstack">
+        <div class="image">
+            <img src="./media_files/images/wellness-pool.webp"
+                 alt="Long indoor swimming pool with calm water, stone walls and bronze details.">
+            <div class="text">
+                <span>WELLNESS</span>
+                <h2>A slower rhythm below the city</h2>
+            </div>
+        </div>
+        <div class="row g-0 row-cols-lg-4 row-cols-mg-2 row-cols-1">
+            <div class="col">
+                <div class="item vstack gap-4 p-4">
+                    <img src="./media_files/icons/icon-spa.svg" style="width: 50px" alt="">
+                    <div>
+                        <h3>Spa</h3>
+                        <span class="text-muted">Restorative treatments grounded in <br> scent, warmth and touch.</span>
+                    </div>
+
+                    <small>10:00-22:00</small>
+                </div>
+            </div>
+            <div class="col">
+                <div class="item vstack gap-4 p-4">
+                    <img src="./media_files/icons/icon-pool.svg" style="width: 50px" alt="">
+                    <div>
+                        <h3>Indoor Pool</h3>
+                        <span class="text-muted">A 20-metre pool with calm lighting <br> and decicated family hours.</span>
+                    </div>
+
+                    <small>06:00-23:00</small>
+                </div>
+            </div>
+            <div class="col">
+                <div class="item vstack gap-4 p-4">
+                    <img src="./media_files/icons/icon-fitness.svg" style="width: 50px" alt="">
+                    <div>
+                        <h3>Spa</h3>
+                        <span class="text-muted">Natural light, thoughtful equipment <br> and private sessions on request.</span>
+                    </div>
+
+                    <small>OPEN 24 HOURS</small>
+                </div>
+            </div>
+            <div class="col">
+                <div class="item vstack gap-4 p-4">
+                    <img src="./media_files/icons/icon-transfer.svg" style="width: 50px" alt="">
+                    <div>
+                        <h3>Spa</h3>
+                        <span class="text-muted">Quiet airport and station journeys <br> arranged by your hotel host.</span>
+                    </div>
+
+                    <small>BY RESERVATION</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- WELLNESS -->
+
+<!-- SHANGHAI -->
+<section id="shanghai">
+    <div class="container vstack gap-4">
+        <div class="hstack justify-content-between flex-wrap gap-3">
+            <div class="vstack gap-2">
+                <span>EXPLORE SHANGHAI</span>
+                <h2>The city, within easy reach</h2>
+            </div>
+
+            <span>Walk the creek, follow the galleries or arrive at the <br> riverfront before the city fully wakes.</span>
+        </div>
+
+        <div class="row g-5 row-cols-lg-2 row-cols-1">
+            <div class="col">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-100" viewBox="0 0 900 640" role="img" aria-labelledby="title desc">
+                    <title id="title">Shanghai neighbourhood map</title>
+                    <desc id="desc">Stylised map showing The Sù Hotel, the Bund, Suzhou Creek Walk and M50 Art
+                        District.
+                    </desc>
+                    <rect width="900" height="640" fill="#E7E2D8"/>
+                    <g fill="none" stroke="#C8C0B3" stroke-width="3" opacity=".8">
+                        <path d="M0 110 900 230M0 280 900 350M0 500 900 430M150 0 230 640M420 0 390 640M690 0 620 640"/>
+                        <path d="m0 410 240-80 180 30 180-120 300 10"/>
+                    </g>
+                    <path d="M-30 160c190-90 280 70 425 20s225-170 540-70v95c-275-75-370 35-510 78S185 205-30 294Z"
+                          fill="#7898A0" opacity=".8"/>
+                    <path d="M760-30c-50 180-5 390 170 540" fill="none" stroke="#7898A0" stroke-width="80"
+                          opacity=".8"/>
+                    <g font-family="Arial,sans-serif" font-size="20" fill="#596064">
+                        <text x="80" y="88">M50</text>
+                        <text x="400" y="315">SUZHOU CREEK</text>
+                        <text x="735" y="390">THE BUND</text>
+                    </g>
+                    <g id="hotel-location">
+                        <circle cx="492" cy="280" r="18" fill="#151719"/>
+                        <circle cx="492" cy="280" r="7" fill="#B28A52"/>
+                        <text x="515" y="287" font-family="Arial,sans-serif" font-size="19" fill="#151719">THE SÙ
+                            HOTEL
+                        </text>
+                    </g>
+                    <g id="marker-m50" class="marker" tabindex="0">
+                        <circle cx="132" cy="112" r="18" fill="#F4F0E8" stroke="#B28A52" stroke-width="5"/>
+                        <text x="126" y="119" font-family="Arial,sans-serif" font-size="18">3</text>
+                    </g>
+                    <g id="marker-suzhou-creek" class="marker" tabindex="0">
+                        <circle cx="410" cy="255" r="18" fill="#F4F0E8" stroke="#B28A52" stroke-width="5"/>
+                        <text x="404" y="262" font-family="Arial,sans-serif" font-size="18">2</text>
+                    </g>
+                    <g id="marker-bund" class="marker" tabindex="0">
+                        <circle cx="738" cy="374" r="18" fill="#F4F0E8" stroke="#B28A52" stroke-width="5"/>
+                        <text x="732" y="381" font-family="Arial,sans-serif" font-size="18">1</text>
+                    </g>
+                </svg>
+            </div>
+            <div class="col">
+                <div class="vstack gap-2 item-area">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- SHANGHAI -->
+
+<!-- FOOTER -->
+<footer>
+    <div class="container vstack gap-3">
+        <div class="row g-3 row-cols-lg-3 row-cols-1">
+            <div class="col vstack gap-4">
+                <img src="./media_files/brand/su-hotel-logo-light.svg" class="logo" alt="">
+                <span>88 North Suzhou Road <br> Shanghai 200085, China</span>
+                <div class="vstack">
+                    <small>+86 21 6888 8800</small>
+                    <small>stay@thesuhotel.example</small>
+                </div>
+            </div>
+            <div class="col">
+                <nav class="d-flex flex-column gap-4">
+                    <a href="#hotel-story" >Hotel</a>
+                    <a href="#rooms" >Rooms</a>
+                    <a href="#dining" >Dining</a>
+                    <a href="#wellness" >Wellness</a>
+                    <a href="#shanghai" >Shanghai</a>
+                </nav>
+            </div>
+            <div class="col">
+                <span class="text-uppercase">LETTERS FROM SHANGHAI</span>
+                <h2 class="fs-1 mb-5">Stay close to the story</h2>
+                <form class="vstack gap-2 footer-form">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="text" placeholder="you@example.com" id="email">
+                    <span class="invalid-feedback" id="email-feedback"></span>
+                </form>
+            </div>
+        </div>
+        <hr class="mt-5">
+        <div class="hstack justify-content-between small">
+            <span>&copy; <span id="year">2026</span> The Sù Hotel Shanghai</span>
+            <div class="hstack gap-4">
+                <a href="#">WeChat</a>
+                <a href="#">Instagram</a>
+                <a href="#">Little Red Book</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- FOOTER -->
+
+<script src="./assets/script.js"></script>
+</body>
+</html>
